@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --color-pasto-950: #16261c;
+  --color-pasto-900: #1f3d2b;
+  --color-pasto-700: #2f5a3e;
+  --color-hueso: #f6f2e9;
+  --color-hueso-dim: #ece5d4;
+  --color-cuero: #7a2e2e;
+  --color-cuero-light: #9c4a3a;
+  --color-trigo: #d9a441;
+  --color-carbon: #22201d;
+}
+
+@theme inline {
+  --color-pasto-950: var(--color-pasto-950);
+  --color-pasto-900: var(--color-pasto-900);
+  --color-pasto-700: var(--color-pasto-700);
+  --color-hueso: var(--color-hueso);
+  --color-hueso-dim: var(--color-hueso-dim);
+  --color-cuero: var(--color-cuero);
+  --color-cuero-light: var(--color-cuero-light);
+  --color-trigo: var(--color-trigo);
+  --color-carbon: var(--color-carbon);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-plex);
+  --font-mono: var(--font-plex-mono);
+}
+
+body {
+  background: var(--color-hueso);
+  color: var(--color-carbon);
+}
+
+.tag-liquidacion {
+  position: relative;
+  isolation: isolate;
+}
+.tag-liquidacion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--color-cuero) 0px,
+    var(--color-cuero) 10px,
+    var(--color-cuero-light) 10px,
+    var(--color-cuero-light) 20px
+  );
+  opacity: 0.08;
+  z-index: -1;
+}
+
+::selection {
+  background: var(--color-trigo);
+  color: var(--color-carbon);
+}
